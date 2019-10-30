@@ -1,1 +1,1 @@
-import installer
+import omega_cli.installer
