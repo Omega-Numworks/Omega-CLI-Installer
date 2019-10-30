@@ -21,3 +21,5 @@ sudo python installer.py
 ```
 
 ...and follow the steps in your terminal!
+
+![Screenshot](https://github.com/Omega-Numworks/Omega-Design/blob/master/screenshots/cli.png)
