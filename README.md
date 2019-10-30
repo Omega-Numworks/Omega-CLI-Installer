@@ -27,6 +27,12 @@ pip install click, PyInquirer
 sudo python installer.py
 ```
 
+## Upgrade to the lastest version of the script
+
+```
+pip install omega-cli --upgrade
+```
+
 ...and follow the steps in your terminal!
 
 ![Screenshot](https://github.com/Omega-Numworks/Omega-Design/blob/master/screenshots/cli.png)
