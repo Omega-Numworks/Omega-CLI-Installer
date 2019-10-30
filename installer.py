@@ -2,7 +2,6 @@ import subprocess
 import click
 from PyInquirer import prompt
 import sys
-from warnings import warn
 
 prompt_download = [
     {
