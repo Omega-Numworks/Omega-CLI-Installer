@@ -15,7 +15,7 @@ First of all, follow **step 1** [here](https://www.numworks.com/resources/engine
 
 ```
 git clone https://github.com/Omega-Numworks/Omega-CLI-Installer.git
-cd Omega-CLI-Installer
+cd Omega-CLI-Installer/omega-cli
 pip install click, PyInquirer
 sudo python installer.py
 ```
