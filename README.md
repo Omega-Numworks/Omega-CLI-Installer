@@ -5,4 +5,19 @@
   <a href="https://github.com/Omega-Numworks/Omega-CLI-Installer/issues"><img alt="Issues" src="https://img.shields.io/github/issues/Omega-Numworks/Omega-CLI-Installer.svg?logo=git&style=for-the-badge" /></a>
 </p>
 
-`BETA`
+## About
+
+This installer is made to install easily [Omega](https://github.com/Omega-Numworks/Omega). This installer is an `ALPHA` release. Errors are not handled correctly.
+
+## Install Omega
+
+First of all, follow **step 1** [here](https://www.numworks.com/resources/engineering/software/build/). Then:
+
+```
+git clone https://github.com/Omega-Numworks/Omega-CLI-Installer.git
+cd Omega-CLI-Installer
+pip install click, PyInquirer
+sudo python installer.py
+```
+
+...and follow the steps in your terminal!
