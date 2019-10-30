@@ -7,7 +7,7 @@
 
 ## About
 
-This installer is made to install easily [Omega](https://github.com/Omega-Numworks/Omega). This installer is an `ALPHA` release. Errors are not handled correctly.
+This installer is made to install easily [Omega](https://github.com/Omega-Numworks/Omega). It also allows you to choose the apps and languages you want to install. This CLI is an `ALPHA` release. Errors are not handled correctly.
 
 ## Install Omega
 
