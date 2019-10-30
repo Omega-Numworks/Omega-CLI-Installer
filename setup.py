@@ -6,7 +6,7 @@ setup(name='omega-cli',
     author='Quentin Guidée',
     author_email='quentin.guidee@gmail.com',
     url='https://github.com/Omega-Numworks/Omega-CLI-Installer/releases/download/0.1.3/omega-cli-0.1.3.tar.gz',
-    packages=['omega-cli'],
+    packages=['omega_cli'],
     install_requires=[
         'click',
         'PyInquirer'
