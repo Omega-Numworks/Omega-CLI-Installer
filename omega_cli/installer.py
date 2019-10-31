@@ -110,6 +110,8 @@ prompts_settings = [
 
 @click.command()
 def main():
+    """Execute the complete 
+    """
     logo()
 
     download(prompt(prompt_download))
@@ -137,6 +139,8 @@ def main():
 
 
 def logo():
+    """Prints the Omega logo
+    """
     # Made with pyfiglet
     click.echo("    ____                             ")
     click.echo("   / __ \____ ___  ___  ____ _____ _ ")
@@ -148,20 +152,37 @@ def logo():
 
 
 def download(download_lastest):
+    """Clones the lastest Omega
+    
+    Args:
+        download_lastest (bool): True to confirm download.
+    """
     if download_lastest['download_lastest']:
         subprocess.run("rm -rf Omega", shell=True)
-        git_clone_process = subprocess.run("git clone --progress --recursive https://github.com/Omega-Numworks/Omega.git", shell=True)
+        subprocess.run("git clone --progress --recursive https://github.com/Omega-Numworks/Omega.git", shell=True)
     
     click.echo("")
 
 
 def make_clean(model):
+    """Delete old builds
+    
+    Args:
+        model (str): Should be n0100 or n0110.
+    """
     click.echo("Cleaning build")
 
     subprocess.run("cd Omega && make MODEL=\"" + model + "\" clean", shell=True, check=True)
 
 
 def make(model, apps, languages):
+    """Build Omega
+    
+    Args:
+        model (str): Should be n0100 or n0110
+        apps (list): Apps to install
+        languages (list): Languages to install
+    """
     click.echo("Making build")
 
     epsilon_apps = ""
@@ -182,6 +203,8 @@ def make(model, apps, languages):
 
 
 def how_to_flash():
+    """Print instructions to flash the calculator
+    """
     click.echo(" 1)  Connect your numworks to your computer with the USB cable")
     click.echo(" 2)  Click on the reset button behind the calculator")
     click.echo(" 3)  Press enter")
@@ -189,10 +212,20 @@ def how_to_flash():
 
 
 def app_flash(model):
+    """Execure "make MODEL={model} app_flash"
+    
+    Args:
+        model (str): Should be n0100 or n0110.
+    """
     subprocess.run("cd Omega && make MODEL=\"" + model + "\" app_flash", shell=True, check=True)
 
 
 def epsilon_flash(model):
+    """Execure "make MODEL={model} epsilon_flash"
+    
+    Args:
+        model (str): Should be n0100 or n0110.
+    """
     subprocess.run("cd Omega && make MODEL=\"" + model + "\" epsilon_flash", shell=True, check=True)
 
 
