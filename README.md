@@ -13,13 +13,13 @@ This installer is made to install easily [Omega](https://github.com/Omega-Numwor
 
 First of all, follow **step 1** [here](https://www.numworks.com/resources/engineering/software/build/). Then, you have two choices:
 
-* **Install from `pip`**
+* **From `pip`**
 ```
 sudo pip install omega-cli
 sudo omega-cli
 ```
 
-* **Install from source**
+* **From source**
 ```
 git clone https://github.com/Omega-Numworks/Omega-CLI-Installer.git
 cd Omega-CLI-Installer/omega-cli
