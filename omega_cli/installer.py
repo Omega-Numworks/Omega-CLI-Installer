@@ -56,6 +56,10 @@ prompts_settings = [
                 'checked': True
             },
             {
+                'name': "atom",
+                'checked': True
+            },
+            {
                 'name': "sequence",
                 'checked': True
             },
@@ -104,7 +108,12 @@ prompts_settings = [
                 'name': "n0110"
             }
         ]
-    }
+    },
+    {
+        'type': 'input',
+        'name': 'username',
+        'message': 'What\'s your name? (default=N/A)'
+    },
 ]
 
 
@@ -117,15 +126,17 @@ def main():
     download(prompt(prompt_download))
 
     settings = prompt(prompts_settings)
-
+    
     model = settings['model']
 
     if (prompt(prompt_build)['build']):
+
         apps = settings['apps']
         languages = settings['languages']
+        username = settings['username']
 
         make_clean(model)
-        make(model, apps, languages)
+        make(model, apps, languages, username)
 
     how_to_flash()
 
@@ -175,13 +186,14 @@ def make_clean(model):
     subprocess.run("cd Omega && make MODEL=\"" + model + "\" clean", shell=True, check=True)
 
 
-def make(model, apps, languages):
+def make(model, apps, languages, username):
     """Build Omega
     
     Args:
         model (str): Should be n0100 or n0110
         apps (list): Apps to install
         languages (list): Languages to install
+        username (str): The username
     """
     click.echo("Making build")
 
@@ -197,7 +209,7 @@ def make(model, apps, languages):
     epsilon_apps = "EPSILON_APPS='" + epsilon_apps + "settings'"
     epsilon_i18n = "EPSILON_I18N='" + epsilon_i18n + "'"
 
-    subprocess.run("cd Omega && make MODEL='" + model + "' " + epsilon_apps + " " + epsilon_i18n, shell=True)
+    subprocess.run("cd Omega && make MODEL='" + model + "' " + epsilon_apps + " " + "USERNAME='" + username + "' " + epsilon_apps + " " + epsilon_i18n, shell=True)
     # rpn graph code statistics probability solver calculation sequence regression settings'
     # EPSILON_I18N='en fr es de pt'
 
