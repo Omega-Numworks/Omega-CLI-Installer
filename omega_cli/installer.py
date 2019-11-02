@@ -135,6 +135,9 @@ def main():
         languages = settings['languages']
         username = settings['username']
 
+        if (username == ""):
+            username = "N/A"
+
         make_clean(model)
         make(model, apps, languages, username)
 
