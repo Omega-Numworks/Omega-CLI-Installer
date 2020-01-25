@@ -7,7 +7,7 @@
 
 ## About
 
-This installer is made to install easily [Omega](https://github.com/Omega-Numworks/Omega). It also allows you to choose the apps and languages you want to install. This CLI is an `BETA` release. Errors are not handled correctly.
+This installer is made to install easily [Omega](https://github.com/Omega-Numworks/Omega). It also allows you to choose the apps and languages you want to install. This CLI is in `BETA`: Errors are not handled correctly.
 
 ## Install Omega
 
@@ -31,7 +31,7 @@ sudo python installer.py
 
 ![Screenshot](https://github.com/Omega-Numworks/Omega-Design/blob/master/screenshots/cli.png)
 
-## Upgrade to the lastest version of the script
+## Upgrade to the latest version of the script
 
 ```
 pip install omega-cli --upgrade
