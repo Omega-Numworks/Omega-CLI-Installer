@@ -2,6 +2,7 @@ import subprocess
 import click
 from PyInquirer import prompt
 import sys
+import os
 
 prompt_download = [
     {
@@ -122,8 +123,12 @@ def main():
     """Execute the complete 
     """
     logo()
-
-    download(prompt(prompt_download))
+    
+    if os.path.isdir('./Omega'):
+        download(prompt(prompt_download))
+    else:
+        print("The Omega directory does not exist. Downloading the latest version of Omega...")
+        download(True)
 
     settings = prompt(prompts_settings)
     
